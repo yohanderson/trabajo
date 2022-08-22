@@ -1,0 +1,234 @@
+/*Given below is Google Fonts CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'poppins',sans-serif;
+}
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    scroll-snap-align: start;
+  }
+  
+  .container {
+    scroll-snap-type: y mandatory;
+    /*scroll-snap-type: y proximity;*/
+    overflow-y: scroll;
+    height: 100vh; /*el contenedor debe tener un alto espacificado*/
+  }
+
+/* section 1 **/
+.uno {
+  width:100%;
+  min-height:100vh;
+  background-color:#f3f5f8;
+}
+#menu {
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+nav{
+  display:flex;
+  width:100%;
+  justify-content: space-around;
+  height: 80px;
+  line-height: 80px;
+  z-index: 111;
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+b{
+    font-size: 50px;
+    color: #7f00ff;
+}
+.navItems{
+    display: flex;
+}
+
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems li a{
+    font-size: 20px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover a, .links a:hover{
+    color: #7f00ff;
+}
+.links a{
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+   overflow: hidden;
+}
+.wrapper::before{
+    position: absolute;
+    content: '';
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    left: -12.5%;
+    top: 42.5%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object1 6s linear infinite;
+}
+.wrapper::after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    left: 25%;
+    top: 26%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object2 6s linear infinite;
+}
+@keyframes object1{
+    50%{
+        left: -10%;
+        top: 40%;
+    }
+}
+@keyframes object2{
+    50%{
+        left: 26%;
+        top: 25%;
+    }
+}
+ .cols{
+    width: 50%;
+ }
+.cols0{
+    width: 60%;
+    z-index: 5;
+}
+ .topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+ }
+ .topline::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #7f00ff;
+ }
+h1{
+    display: block;
+    font-size: 5em;
+    font-weight: 900;
+    color: #3d535f;    
+}
+.multiText{
+    color: #7f00ff;
+    text-transform: capitalize;
+}
+p{
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: #3d535f;
+}
+.btns{
+    width: 100%;
+    position: relative;
+    left: 80px;    
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #f3f5f8;
+    background-color: #3d535f;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+button:hover{
+    background-color: #7f00ff;
+}
+.imgbox{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 20%;
+    top: 120px;
+}
+
+.imgbox img{
+    position: relative;
+    height: 80%;
+    width: calc(100% - 80px);
+    top: -100px;
+    right: 50px;
+    transform: rotateY(180deg);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    50%{
+        right: 49px;
+        top: -5px;
+        width:80%;
+    }
+}
+.imgbox #splash{
+    position: absolute;
+    top: -20%;
+    left: -5%;
+    transform: translate(-50%, -50%), rotateY(35deg);
+    width:80%;
+    height: 80%;
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+}
+
+/*section2*/
+.dos {
+    background-color: lightcoral;
+  }
+
+/*section2*/
+  .tres {
+    background-color: lightblue;
+  }
+
+/*section2*/
+  .cuatro {
+    background-color: orange;
+  }
